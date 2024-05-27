@@ -15,7 +15,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Accept License Agreement
-        run: echo "y" | your_license_command_here
+        run: echo "y" | ./license_agreement.sh
+
 
       # used to cache dependencies with a timeout
       - name: Get Date
