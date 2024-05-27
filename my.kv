@@ -1,0 +1,66 @@
+<MyLayout>:
+
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1  # Set the color to white
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    GridLayout:
+        cols: 1
+        rows: 2
+        Image:
+            source: 'LenogW.png'
+            size_hint_y: None  # Disable vertical size hint
+            height: '400dp'  # Set fixed height
+        GridLayout:
+            cols: 2
+            rows: 2
+            spacing:10
+            padding: 10
+            Image:
+                source: 'QRCODE.png'
+                size_hint_y: 0.75
+            Image:
+                source: 'SEARCH.png'
+                size_hint_y: 0.75
+            RButton1:
+                text: 'SCAN BY QR CODE'
+                bold: True
+                size_hint_y: 0.25
+                #background_color: 0.5, 0.5, 0.5, 1  # Set background color of button
+                #border_radius: [20]  # Set corner radius to 20 pixels
+            RButton2:
+                text: 'SEARCH by FM ID'
+                bold: True
+                size_hint_y: 0.25
+                #background_color: 0.5, 0.5, 0.5, 1  # Set background color of button
+                #border_radius: [100]  # Set corner radius to 50 pixels
+
+<RButton1@Button>:
+    background_color: (0, 0, 0, 0)
+    background_normal: ''
+    font_size: 25
+    font_name: r'C:\Users\rydel\PycharmProjects\pythonProject\BFJI Homepage\MotionPersonalUseBold-2O0od.ttf'
+    canvas.before:
+        Color:
+            rgba: (24/255, 177/255, 140/255, 0.85) if self.state == 'normal' else (15/255, 114/255, 90/255, 1)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [25]
+
+
+<RButton2@Button>
+    background_color: (0, 0, 0, 0)
+    background_normal: ''
+    font_size: 25
+    font_name: r'C:\Users\rydel\PycharmProjects\pythonProject\BFJI Homepage\MotionPersonalUseBold-2O0od.ttf'
+    canvas.before:
+        Color:
+            rgba: (24/255, 177/255, 140/255, 0.85) if self.state == 'normal' else (15/255, 114/255, 90/255, 1)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [25]
